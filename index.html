@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX WEBSITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* THIS IS A HEADER */
+        .fixed-header {
+            width: 100%;
+            background: white;
+            position: fixed;
+        }
+
+        .headerline1 {
+            display: flex;
+            width: 65%;
+            gap: 20px;
+            margin-top: 10px;
+            margin: auto;
+        }
+
+        .navlist {
+            display: flex;
+            gap: 30px;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        .icons {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .headerline2 {
+            display: flex;
+            gap: 40px;
+            width: 66%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdownarrowicon {
+            position: relative;
+            right: 30px;
+
+        }
+
+        .dropdownbutton {
+            height: 45px;
+            width: 180px;
+            font-size: large;
+            text-align: justify;
+            background-color: white;
+            border: 1px solid gray;
+        }
+
+        .dropdownbutton:after {
+            margin-left: 90px;
+
+        }
+
+        .dropdowncontent {
+            display: none;
+            position: absolute;
+            height: 200px;
+            border: 1px solid black;
+            width: 178px;
+            overflow-y: auto;
+            background-color: white;
+        }
+
+        .dropdowncontent a {
+            text-decoration: none;
+            color: black;
+            font-size: medium;
+            display: block;
+            font-size: large;
+            line-height: 30px;
+        }
+
+        .dropdowncontent a:hover {
+            color: aqua;
+
+        }
+
+        .dropdown:hover .dropdowncontent {
+            display: block;
+        }
+
+        .dropdownicon {
+            display: flex;
+        }
+
+        .inputfieldtext {
+            height: 39px;
+            width: 345px;
+            font-size: medium
+        }
+
+        .login {
+            font-size: x-large;
+            color: darkblue;
+        }
+
+        .loginbutton a:hover {
+            text-decoration: none;
+        }
+
+        .sellbutton {
+            border: 4px solid transparent;
+            border-image: linear-gradient(purple, red, black);
+            height: 40px;
+            border-image-slice: 1;
+            width: 70px;
+            border-radius: 20px;
+            text-align: end;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .sellicon {
+            left: 27px;
+            position: relative;
+            top: 6px;
+        }
+
+        .one {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .links {
+            align-items: center;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #002f34;
+            font-size: 15px;
+            gap: 10px;
+        }
+
+        .links a:hover {
+            color: aqua;
+        }
+
+        /* THIS IS A SLIDER */
+        .slider {
+
+            width: 100%;
+            margin-top: 193px;
+
+        }
+
+        /* THIS IS ALL CATEGOERIES LIST */
+        .categories {
+            text-align: center;
+            margin-top: 15px;
+
+
+        }
+
+        .allcategories {
+            text-align: center;
+        }
+
+        .allimages {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto;
+            margin: auto;
+            width: 70%;
+        }
+
+        .imagecontent {
+            text-align: center;
+        }
+
+        /* <!-- THESE ARE CARDS --> */
+        .cardcontainer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+
+        }
+
+        .card {
+            height: 450px;
+            width: 300px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .cardcontent h1 {
+            line-height: 4rem;
+
+        }
+
+        .cardcontent p {
+            line-height: 2rem;
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 5px;
+        }
+
+        /* THIS IS UPER FOOTER */
+        .footer {
+            display: flex;
+            justify-content: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            align-items: center;
+            margin-top: 10px;
+
+        }
+
+        .footerimages {
+            height: 28px;
+            display: flex;
+            justify-content: space-around;
+            width: 180px;
+            margin: 20px;
+            margin: 10px 100px 0px 0px;
+
+        }
+
+        .div1 {
+            margin-top: 20px;
+        }
+
+        .div2 {
+            margin-top: 20px;
+        }
+
+        .div3 {
+            margin-top: 20px;
+        }
+
+        /* THIS IS FOOTER   */
+        footer {
+            display: flex;
+
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            background-color: beige;
+            gap: 100px;
+            margin-top: 10px;
+        }
+
+        section h6 {
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        section li {
+            color: black;
+            font-size: small;
+            font-family: sans-serif;
+            line-height: 2em;
+        }
+
+        section ul {
+            list-style-type: none;
+        }
+
+        section a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        section a:hover {
+            color: rgb(180, 17, 66);
+        }
+
+        .icons {
+            gap: 10px;
+        }
+
+        .images {
+            height: 24px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .title {
+            background-color: rgb(6, 59, 6);
+            color: white;
+            text-align: right;
+            padding: 10px;
+        }
+
+        @media only screen and (max-width:1024px) {
+
+            .inputfieldtext {
+                display: none;
+            }
+
+            .headerline2 {
+
+                flex-wrap: wrap;
+            }
+
+            .one {
+
+                flex-wrap: wrap;
+            }
+
+            .div2 {
+                display: none;
+            }
+        }
+
+        @media only screen and (max-width:768px) {
+            section li {
+                font-size: larger;
+            }
+
+            section h6 {
+                font-size: larger;
+            }
+
+            .allimages {
+                grid-template-columns: auto auto auto;
+            }
+
+
+            .div4 h1 {
+                font-size: medium;
+            }
+
+            .olximage {
+                height: 100px;
+                width: 300px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- THIS IS A HEADER -->
+    <div>
+        <header class="fixed-header">
+            <div class="headerline1">
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpqfEZTbw3kP6VH9MXJ018iDt9z6WzhDA-yQ&s"
+                        alt="logo" height="60px" width="70px" class="logo" />
+                </div>
+                <div class="navlist">
+                    <div class="icons">
+                        <i class='fas fa-car' style='font-size:20px'></i>
+                        <p> Motors</p>
+                    </div>
+                    <div class="icons">
+                        <i class='far fa-building' style='font-size:20px'></i>
+                        <p>Property</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="headerline2">
+                <div class="dropdown">
+                    <box-icon name='location-plus' color='rgba(90,166,27,0)'></box-icon>
+                    <button class="dropdownbutton">Pakistan</button>
+                    <img src="https://www.olx.com.pk/assets/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg"
+                        alt="dropdownarrow" height="15px" class="dropdownarrowicon" />
+                    <div class="dropdowncontent">
+                        <div class="dropdownicon">
+                            <i class='bx bxs-location-plus'></i>
+                            <a href="#" style="background-color:whitesmoke;">See current location</a>
+                        </div>
+
+                        <br />
+                        <div class="dropdownicon">
+                            <i class='bx bxs-location-plus'></i>
+                            <a href="#">See ads in all pakistan</a>
+                        </div>
+                        <br />
+                        <div>
+                            <div class="dropdownsubheading" style="color:blue;">CHOOSE ALL REGIONS</div>
+                        </div>
+                        <br />
+                        <div class="dropdownicon">
+                            <i class='bx bxs-location-plus'></i>
+                            <a href="#">Azad Kashmir,Pakistan</a>
+                        </div> <br />
+                        <div class="dropdownicon">
+                            <i class='bx bxs-location-plus'></i>
+                            <a href="#">Balochistan,Pakistan</a>
+                        </div> <br />
+                        <div class="dropdownicon">
+                            <i class='bx bxs-location-plus'></i>
+                            <a href="#">Khyber Pakhtun Khwa,Pakistan</a>
+                        </div> <br />
+                        <div class="dropdownicon">
+                            <i class='bx bxs-location-plus'></i>
+                            <a href="#">Northern Areas,Pakistan</a>
+                        </div> <br />
+                        <div class="dropdownicon">
+                            <i class='bx bxs-location-plus'></i>
+                            <a href="#">Sindh,Pakistan</a>
+                        </div> <br />
+                        <div class="dropdownicon">
+                            <i class='bx bxs-location-plus'></i>
+                            <a href="#">Punjab,Pakistan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <input type="text" placeholder="Find Cars,Mobile Phones and more..." class="inputfieldtext" />
+                </div>
+                <div class="loginbutton">
+                    <a href="#" class="login">Login</a>
+                </div>
+                <div class="button">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFZJREFUSEtjZKAxYKSx+QyjFhAMYVKD6D/URKL1Ea0QavCoBQTjbOgEEcylBL2EpgAj0eBKRTS3AJfLh04cjPoAHgKDriwiNV+M1miEQ4zUSCZsIpoKAFy0DhnDOA3uAAAAAElFTkSuQmCC"
+                        class="sellicon" />
+                    <button class="sellbutton">SELL</button>
+                </div>
+            </div>
+            <div class="one">
+                <div class="dropdown">
+                    ALL CATEGORIES
+                    <img src="https://www.olx.com.pk/assets/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg"
+                        alt="dropdownarrow" height="15px" />
+                    <div class="dropdowncontent">
+                        <a href="#">Mobile Phones</a>
+                        <a href="#">Cars</a>
+                        <a href="#">Motorcycles</a>
+                        <a href="#">Houses</a>
+                        <a href="#">Videos-Audios</a>
+                        <a href="#">Tablets</a>
+                        <a href="#">Land And Plots</a>
+                    </div>
+                </div>
+                <div class="links">
+                    <a href="#">Mobile Phones</a>
+                </div>
+
+                <div class="links">
+                    <a href="#">Cars</a>
+                </div>
+                <div class="links">
+                    <a href="#">Motorcycles</a>
+                </div>
+                <div class="links">
+                    <a href="#">Houses</a>
+                </div>
+                <div class="links">
+                    <a href="#">Videos-Audios</a>
+                </div>
+                <div class="links">
+                    <a href="#">Tablets</a>
+                </div>
+                <div class="links">
+                    <a href="#">Land And Plots</a>
+                </div>
+            </div>
+
+            <div>
+        </header>
+        <!-- THIS IS A SLIDER -->
+        <div class="image">
+            <img src="https://images.olx.com.pk/thumbnails/437508562-800x600.webp" alt="slider" class="slider" />
+        </div>
+        <!-- THIS IS ALL CATEGORIES LIST -->
+        <div class="categories">
+            <div class="allcategories">
+                <h1>
+                    All Cateogories
+                </h1>
+            </div>
+            <div class="allimages">
+                <div>
+                    <img src="https://www.olx.com.pk/assets/mobiles.8c768c96bfde33f18fcf5af2a8b9cf71.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Mobiles
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.olx.com.pk/assets/vehicles.29fb808d5118f0db56f68a39ce5392e2.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Vehicles
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.olx.com.pk/assets/property-for-sale.e3a00dbfdaa69fe5f713665f1069502f.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Property<br /> For Sale
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.olx.com.pk/assets/property-for-rent.8436595fbaa90d47f0178006f57090a8.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Property<br /> For Rent
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.olx.com.pk/assets/electronics-home-appliances.46e034dd8adca44625c2c70e4d1b5984.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Electronic<br /> And Home
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.olx.com.pk/assets/bikes.4dcd02c49b2b83aa5b4d629d1e2b383e.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        bikes
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.olx.com.pk/assets/business-industrial-agriculture.704a6ffb9081bc94b11c102cc613670f.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Business<br />And Industrial
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.olx.com.pk/assets/services.dc6aef196c0403dc61b0ee813f66fa5b.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Services
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.olx.com.pk/assets/jobs.79e6136dda02111cf8e7afe26b9e0f93.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Jobs
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.olx.com.pk/assets/animals.62d396e85f7523dbc8ff23889fdd5c31.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Animals
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.olx.com.pk/assets/furniture-home-decor.66bcf157a53ea4c736a5b0af41219475.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Furniture<br />And HomeDecor
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.olx.com.pk/assets/fashion-beauty.dd2cf7638c29b0e5c084a6673dd94dd7.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Fashion<br />And Beauty
+                    </div>
+                </div>
+                <div>
+                    <img src="	https://www.olx.com.pk/assets/books-sports-hobbies.6fee8d841b332d65a10f050f4a2ee1c8.png"
+                        height="100px" />
+                    <div class="imagecontent">
+                        Books,Sports<br /> And Hobbies
+                    </div>
+                </div>
+                <div>
+                    <img src="https://www.olx.com.pk/assets/kids.cd8d8864804f1c35dd6a7df68268a48d.png" height="100px" />
+                    <div class="imagecontent">
+                        Kids
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- THESE ARE CARDS -->
+        <main>
+            <h1>
+                MOBILE PHONES
+            </h1>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1695046854/Croma%20Assets/Communication/Cases%20and%20Covers/Images/300936_0_kg2unz.png?tr=w-400"
+                            alt="mobile image" height="250" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹4,169
+                            </h1>
+                            <p>
+                                Apple iPhone 15 Pro
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1705576261/Croma%20Assets/Communication/Mobiles/Images/303849_evezut.png?tr=w-400"
+                            alt="mobile image" height="250" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹67,999
+                            </h1>
+                            <p>
+                                SAMSUNG Galaxy S24 5G
+                            </p>
+                            <p>
+                                Standard Delivery by Wed, 28th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1722585913/Croma%20Assets/Communication/Mobiles/Images/308830_0_ip4cdu.png?tr=w-400"
+                            alt="mobile image" height="250" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹12,999
+                            </h1>
+                            <p>
+                                oppo K12x 5G
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1708672728/Croma%20Assets/Communication/Mobiles/Images/261934_0_kukyat.png?tr=w-400"
+                            alt="mobile image" height="250" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹61,790
+                            </h1>
+                            <p>
+                                Apple iPhone 14
+                            <p>
+                                Standard Delivery by Wed, 28th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1>
+                CARS
+            </h1>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://cache3.pakwheels.com/system/car_generation_pictures/2881/original/Toyota-Land-Cruiser-100_2000.jpg?1444112192"
+                            alt="car image" height="200" width="300px" style="background-color:whitesmoke;" />
+
+                        <div class="cardcontent">
+                            <h1>
+                                7,710,000
+                            </h1>
+                            <p>
+                                Toyota Land Cruiser Amazon 4.2D Price in Pakistan
+
+                            </p>
+                            <p>
+                                Standard Delivery by Wed, 28th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://cache1.pakwheels.com/system/car_generation_pictures/5361/original/Corolla-X-Cars-Cropped-Pictures-for-Website.jpg?1606903674"
+                            alt="car image" height="200" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                59.7 - 75.5 lacs
+                            </h1>
+                            <p>
+                                SAMSUNG Galaxy S24 5G
+                            </p>
+                            <p>
+                                Standard Delivery by Wed, 28th Aug
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://cache3.pakwheels.com/system/car_generation_pictures/7721/original/Yaris.png?1716536903"
+                            alt="car image" height="250" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹12,999
+                            </h1>
+                            <p>
+                                Toyota Yaris 2024
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://cache4.pakwheels.com/system/car_generation_pictures/7370/original/Cover.jpg?1677570254"
+                            alt="car image" height="250" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹12,999
+                            </h1>
+                            <p>
+                                Honda Civic 2024
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h1>
+                BIKES AND MOTORCYCLES
+            </h1>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://cars.usnews.com/images/new-features/widget-section/2020_Suzuki_Hayabusa_1340_KnuZ8qE.jpg"
+                            alt="bike image" height="250" width="300px" style="background-color:whitesmoke;" />
+
+                        <div class="cardcontent">
+                            <h1>
+                                $4,599
+                            </h1>
+                            <p>
+                                Sport Bike Motorcycle
+
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://bikes.tractorjunction.com/_next/image?url=https%3A%2F%2Fimages.tractorjunction.com%2F17_Bullet_350_85629fa16a.png%3Fformat%3Dwebp&w=384&q=75"
+                            alt="bike image" height="250" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹ 1.74
+                            </h1>
+                            <p>
+                                Royal ENFIELD Bulllet 350
+                            </p>
+                            <p>
+                                Standard Delivery by Wed, 28th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="motorcycle image" height="250" width="300px" style="background-color:whitesmoke;" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹12,999
+                            </h1>
+                            <p>
+                                Hoyun Star Moto Angola 125/150/200cc
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZ1YanUX4YUcRoQt3l5KkTtr_hlE2pN8zYA&s"
+                            alt="motorcycle image" height="250" width="300px" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹15,000
+                            </h1>
+                            <p>
+                                Hoyun Star Moto Kyoto 125/150/200cc
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1>
+                HOUSES
+            </h1>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://amazingarchitecture.com/storage/8213/responsive-images/framed-house-mohali-forum-advaita___media_library_original_1344_756.jpg"
+                            alt="house image" height="250" width="300px" />
+
+                        <div class="cardcontent">
+                            <h1>
+                                $15,000
+                            </h1>
+                            <p>
+                                The Framed House, Mohali
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://amazingarchitecture.com/storage/files/1742/architecture-projects/mcleod-bovell-modern-houses/liminal-house/liminal-house-west-vancouver-mcleod-bovell-modern-houses-1.jpg"
+                            alt="house image" height="250" width="300px" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹670,999
+                            </h1>
+                            <p>
+                                Liminal House, West Vancouver, Canada
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src=" https://amazingarchitecture.com/storage/5413/responsive-images/santa-monica-residence-california-fer-studio___media_library_original_1344_756.jpg"
+                            alt="house image" height="250" width="300px" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹120,999
+                            </h1>
+                            <p>
+                                Santa Monica Residence, California
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://amazingarchitecture.com/storage/5429/responsive-images/nest-boxes-zakopane-bartlomiej-drabik___media_library_original_460_259.jpg"
+                            alt="house image" height="250" width="300px" />
+                        <div class="cardcontent">
+                            <h1>
+                                $25,000
+                            </h1>
+                            <p>
+                                Nest Boxes, Zakopane, Poland
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1>
+                TABLETS
+            </h1>
+            <div class="cardcontainer">
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://cdn.mos.cms.futurecdn.net/VKbneYXUHx9thJvGjS8zE-970-80.jpg.webp"
+                            alt="tablet image" height="250px" width="300px" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹4,169
+                            </h1>
+                            <p>
+                                iPad 10.9
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://assets.mofoprod.net/network/images/Samsung-GalaxyTablets_ec3qtp_BHsqtaH.width-250.jpg"
+                            alt="tablet image" height="250" width="300px" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹67,999
+                            </h1>
+                            <p>
+                                Samsung Galaxy Tablets
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://m.media-amazon.com/images/I/61NGnpjoRDL.__AC_SY445_SX342_QL70_FMwebp_.jpg"
+                            alt="tablet image" height="250" width="300px" />
+                        <div class="cardcontent">
+                            <h1>
+                                ₹7,999
+                            </h1>
+                            <p>
+                                Apple iPad (9th Generation)
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="cardimage">
+                        <img src="https://i.pcmag.com/imagery/reviews/01eb17zxmEiSBZAvZVKrTCU-12.fit_lim.size_120x68.v1711553000.jpg"
+                            alt="tablet image" height="250" width="300px" />
+                        <div class="cardcontent">
+                            <h1>
+                                $260.78
+
+                            </h1>
+                            <p>
+                                Samsung Galaxy Tab A9+
+                            </p>
+                            <p>
+                                Standard Delivery by Thur, 29th Aug
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <!-- THIS IS UPER FOOTER -->
+        <div class="footer">
+            <div class="div1">
+                <img src="https://www.olx.com.pk/assets/olxMobileApp.f5579f77e849b600ad60857e46165516.webp"
+                    alt="olx image" class="olximage" height="200px" width="350px">
+            </div>
+            <div class="div2">
+                <h1> Try the OLX app</h1>
+                <h4> Buy,Sell and find just about anything<br />using the app on your mobile </h4>
+            </div>
+
+            <div class="div3">
+                <h1>
+                    GET YOUR APP TODAY
+                </h1>
+                <div class="footerimages">
+                    <img src="https://www.olx.com.pk/assets/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg"
+                        height="28px" width="250px" />
+                    <img src="https://www.olx.com.pk/assets/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg"
+                        height="28px" width="250px" />
+                    <img src="https://www.olx.com.pk/assets/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg/"
+                        height="28px" width="250px" />
+                </div>
+            </div>
+        </div>
+        <!-- THIS IS FOOTER -->
+        <footer>
+            <div class="main">
+                <section>
+                    <ul>
+                        <li>
+                            <h6>
+                                Popular Categories
+                            </h6>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Flats for rent</a></li>
+                        <li><a href="#">Mobile Phones</a></li>
+                        <li><a href="#">Jobs</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <h6>
+                                Trending Searches
+                            </h6>
+
+                        <li><a href="#"><a href="#">Bikes</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Boooks</a></li>
+                        <li><a href="#">Dogs</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <h6>
+                                About Us
+                            </h6>
+
+
+                        <li><a href="#">About Dubizzle Group</a></li>
+                        <li><a href="#">OLX Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">OLX For Businesss</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <h6>
+                                OLX
+                            </h6>
+
+                        <li><a href="#"> Contact Us </a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Term Of Use</a></li>
+                        <li><a href="#">Private Policy</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>
+                        Follow us
+                    </h1>
+                    <div class="icons">
+                        <i class='bx bxl-twitter'></i>
+                        <i class='bx bxl-facebook-circle'> </i>
+                        <i class='bx bxl-instagram'></i>
+                        <i class='bx bxl-youtube'></i>
+                    </div>
+                    <br />
+
+                    <div class="images">
+                        <img
+                            src="https://www.olx.com.pk/assets/iconAppStoreEN_noinline.a731d99c8218d6faa0e83a6d038d08e8.svg" />
+                        <img
+                            src="https://www.olx.com.pk/assets/iconGooglePlayEN_noinline.9892833785b26dd5896b7c70b089f684.svg" />
+                        <img
+                            src="https://www.olx.com.pk/assets/iconAppGallery_noinline.6092a9d739c77147c884f1f7ab3f1771.svg/" />
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <div class="title">
+            <div class="subtitle">
+                <p>
+                    Free Classified In Pakistan
+
+                    .@2006-2024 OLX
+                </p>
+            </div>
+        </div>
+</body>
+
+</html>
